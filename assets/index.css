@@ -1,0 +1,46 @@
+.search{
+  background: #e9eaea;
+  padding: 10% 0;
+}
+.tracking{
+  padding: 3%;
+}
+.logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-text{
+  display: inline-block;
+  font-weight: 100;
+  font-size: 4em;
+  letter-spacing: 0.1em;
+  color: #009499;
+}
+.btn-success{
+    width: 40%;
+    margin-top: 10px;
+}
+form{
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+}
+input[type="text"]{
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 6px;
+}
+.ikoner{
+  margin: 50px 0;
+  text-align: center;
+}
+.btn-table{
+  padding: 3px 6px;
+  background-color: #5CC7CC;
+}

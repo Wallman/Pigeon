@@ -1,0 +1,22 @@
+#animation-container{
+  display: inline-block;
+  position: relative;
+  height: 400px;
+  width: 50%;
+  left: 25%;
+  background: url('img/map2.png');
+  background-size: cover;
+  border-radius: 10px;
+}
+#dot{
+  position: relative;
+  animation-name: move;
+  animation-duration: 15s;
+  left: 10%;
+  top: 35%;
+  z-index: 1;
+}
+@keyframes move {
+    0%   {left:80%; top:10%;}
+    100% {left:10%; top:35%;}
+}
