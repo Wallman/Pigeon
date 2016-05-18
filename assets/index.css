@@ -1,3 +1,7 @@
+/*Colors
+http://colorschemedesigner.com/csd-3.5/#3j11T--MJw0w0
+Main: #00C9D2 */
+
 .search{
   background: #e9eaea;
   padding: 10% 0;
@@ -15,7 +19,7 @@
   font-weight: 100;
   font-size: 4em;
   letter-spacing: 0.1em;
-  color: #009499;
+  color: #00C9D2;
 }
 .btn-success{
     width: 40%;
@@ -36,11 +40,7 @@ input[type="text"]{
   padding: 5px;
   margin-top: 6px;
 }
-.ikoner{
+.what-box{
   margin: 50px 0;
   text-align: center;
-}
-.btn-table{
-  padding: 3px 6px;
-  background-color: #5CC7CC;
 }

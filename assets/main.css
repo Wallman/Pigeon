@@ -1,9 +1,12 @@
+/*Colors http://colorschemedesigner.com/csd-3.5/#3j11T--MJw0w0
+Main: #00C9D2 */
+
 html, body{
   height: 100%;
 }
 .menu{
   height: 45px;
-  background-color: #005F63;
+  background-color: #00C9D2;
   /*background-color: white;*/
   display: flex;
   justify-content: flex-end;

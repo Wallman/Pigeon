@@ -33,12 +33,12 @@
             <tr>
               <td>Hem</td>
               <td>Kompis</td>
-              <td><button type='button' class='btn btn-table'><span class="glyphicon glyphicon-pencil"></span></button></td>
+              <td><button type='button' class='btn btn-default btn-sm'><span class="glyphicon glyphicon-pencil"></span></button></td>
             </tr>
             <tr>
               <td>Bonn Sushi</td>
               <td>Hem</td>
-              <td><button type='button' class='btn btn-table'><span class="glyphicon glyphicon-pencil"></span></button></td>
+              <td><button type='button' class='btn btn-default btn-sm'><span class="glyphicon glyphicon-pencil"></span></button></td>
             </tr>
           </tbody>
         </table>
