@@ -6,7 +6,8 @@
   left: 25%;
   background: url('img/map.png');
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 #dot{
   position: relative;

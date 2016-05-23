@@ -41,7 +41,7 @@
 
     <div class='about'>
       <div class='container'>
-        <h1>Vad är Pigeon?</h1>
+        <h1>Hur fungerar det?</h1>
         <div class='row what-box'>
           <div class='col-sm-3'>
             <img src="http://placehold.it/150x150" alt='steg1'>
