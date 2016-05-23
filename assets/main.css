@@ -2,12 +2,13 @@
 Main: #00C9D2 */
 
 html, body{
+  margin: 0 0;
   height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .menu{
   height: 45px;
   background-color: #00C9D2;
-  /*background-color: white;*/
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -16,9 +17,18 @@ html, body{
   margin-right: 15%;
 }
 .menu button{
+  font-size: 10pt;
   margin: 0 15px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  background-color: Transparent;
+  color: white;
 }
-/*Ta bort nedan??*/
+.menu button:hover{
+  background-color: white;
+  color: black;
+}
+/*Ta bort nedan?? Det är för ev. privat och företagslänkar*/
 .menu a{
   align-self: flex-end;
   background-color: #009299;
