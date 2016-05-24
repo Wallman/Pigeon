@@ -10,8 +10,10 @@
   <head>
     <meta charset='utf-8'>
     <title>Pigeon</title>
-    <link rel='stylesheet' type='text/css' href='assets/main.css'>
-    <link rel='stylesheet' type='text/css' href='assets/index.css'>
-    <link rel='stylesheet' type='text/css' href='assets/animation.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/main.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/startpage.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/animation.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/dialog.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/form.css'>
   </head>
   <body>
