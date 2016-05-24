@@ -4,11 +4,10 @@ Main: #00C9D2 */
 
 .search{
   background: #e9eaea;
-  background-image: url('img/uppsala.jpg');
+  background-image: url('../img/uppsala.jpg');
   background-repeat: no-repeat;
   padding: 10% 0;
   background-size: cover;
-  /*-webkit-filter: blur(2px);*/
 }
 .logo-container{
   display: flex;
