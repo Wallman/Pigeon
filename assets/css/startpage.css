@@ -22,7 +22,12 @@ Main: #00C9D2 */
   color: #00C9D2;
   color: white;
 }
-.what-box{
+.about .container{
   margin: 50px 0;
   text-align: center;
+  float:left; width:25%;
+  font-weight: 100;
+  font-size: 1em;
+  letter-spacing: 0.04em;
+  color: black;
 }
