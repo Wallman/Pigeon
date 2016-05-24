@@ -8,8 +8,8 @@
     }
     else{
       echo "<div>
-              <button id='loginBtn' type='button' onclick='logIn()'>Logga in</button>
-              <button id='registerBtn' type='button' onclick='reg()'>Registrera</button>
+              <button id='loginBtn' type='button'>Logga in</button>
+              <button id='registerBtn' type='button'>Registrera</button>
             </div>";
     }
    ?>
