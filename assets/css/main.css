@@ -42,3 +42,14 @@ html, body{
 .menu a:hover{
   outline: 1px solid white;
 }
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 20%;
+}
