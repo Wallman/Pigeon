@@ -3,13 +3,13 @@
     // echo $_SERVER['PHP_SELF'];
     if(isset($_SESSION['email'])){
       echo "<div>
-              <button id='logout' type='button'>Logga ut</button>
+              <button id='logoutBtn' type='button'>Logga ut</button>
             </div>";
     }
     else{
       echo "<div>
-              <button id='login' type='button'>Logga in</button>
-              <button id='register' type='button'>Registrera</button>
+              <button id='loginBtn' type='button'>Logga in</button>
+              <button id='registerBtn' type='button'>Registrera</button>
             </div>";
     }
    ?>

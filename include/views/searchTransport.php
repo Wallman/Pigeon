@@ -5,7 +5,7 @@
   </div>
 
   <form name='searchForm' method='POST' action='search_transport.php'>
-    <h3>Sök transport</h3>
+    <h2>Sök transport</h2>
     <input type='text' name='from' placeholder='Från' class='text'>
     <input type='text' name='to' placeholder='Till' class='text'>
 
