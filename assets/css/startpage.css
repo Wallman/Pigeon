@@ -9,6 +9,9 @@ Main: #00C9D2 */
   padding: 10% 0;
   background-size: cover;
 }
+.search input{
+  font-size: 20px;
+}
 .logo-container{
   display: flex;
   justify-content: center;
