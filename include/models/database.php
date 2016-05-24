@@ -56,6 +56,7 @@
       $this->conn->close();
       return false;
     }
+    // Tar in email och returnerar en User
     public function GetUser($email){
       $this->connect();
       $sql = "SELECT * FROM user";
