@@ -1,5 +1,5 @@
 <dialog id='loginDialog'>
-  <form name='loginForm'>
+  <form name='loginForm' method='POST' action='login.php'>
     <label for='email'>Email</label>
     <input type='text' name='email' placeholder='Email'>
 

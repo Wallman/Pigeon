@@ -59,15 +59,42 @@
     // Tar in email och returnerar en User
     public function GetUser($email){
       $this->connect();
-      $sql = "SELECT * FROM user";
+      $sql = "SELECT * FROM user WHERE email=?";
+
+      if($stmt = $this->conn->prepare($sql))
+      {
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        if($row = $stmt->get_result()->fetch_assoc())
+        {
+          $user = new User($row['email'], $row['name'], $row['password'], $row['salt'], $row['company']);
+          $stmt->close();
+          $this->conn->close();
+          return $user;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return false;
+      }
+      $this->conn->close();
+      return false;
+    }
+
+    public function GetImg($email){
+      $this->connect();
+      $sql = "SELECT imgUrl FROM user";
       $result = $this->conn->query($sql);
       if($this->conn->error){
         die($this->conn->error);
       }
       if($row = $result->fetch_assoc())
       {
-        $user = new User($row['email'], $row['name'], $row['password'], $row['salt'], $row['company']);
-        return $user;
+        return $row['imgUrl'];
       }
       return false;
     }

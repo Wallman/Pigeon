@@ -12,7 +12,9 @@ $('#registerBtn').click(function(){
 });
 
 $('#logoutBtn').click(function(){
-
+  $.get('logout.php', function(){
+    location.reload();
+  });
 });
 
 $('.hideBtn').click(function(e){
