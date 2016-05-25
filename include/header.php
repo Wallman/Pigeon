@@ -13,5 +13,6 @@
     <link rel='stylesheet' type='text/css' href='assets/css/tracking.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/dialog.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/form.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/profile.css'>
   </head>
   <body>
