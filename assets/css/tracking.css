@@ -7,7 +7,7 @@
   height: 400px;
   width: 50%;
   left: 25%;
-  background: url('img/map.png');
+  background: url('../img/map.png');
   background-size: cover;
   border-radius: 5px;
   border: 1px solid lightgrey;
