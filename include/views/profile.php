@@ -1,9 +1,11 @@
-<h1>Min profil</h1>
-<div class='container' id="profilePic">
-  <img src="http://www.netdoktorpro.se/images/img/no_avatar.gif" alt='steg1'>
-</div>
+<body>
+  <h1>Min profil</h1>
 
-<form>
-  Email: <input type="text" name="Namn: " value="Sven Svensson" readonly><br>
-  Country: <input type="text" name="E-mail: " value="sven.son@gmail.com" readonly><br>
-</form>
+      <img src="http://www.netdoktorpro.se/images/img/no_avatar.gif" alt='profile'>
+
+  <form>
+     Namn: <input type="text" name="namn" value="Sven Svensson" readonly><br>
+     E-mail: <input type="text" name="email" value="sven.son@gmail.com" readonly><br>
+     Adress: <input type="text" name="adress" value="Stationsvägen 3" readonly><br>
+  </form>
+</body>
