@@ -4,7 +4,7 @@
   // Inloggad
   if(isset($_SESSION['email'])){
     // Privat
-    if($_SESSION['private'] == 1){
+    if($_SESSION['company'] == 0){
       include ('include/views/tracking.php');
       include ('include/views/searchTransport.php');
     }

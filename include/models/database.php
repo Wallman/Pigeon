@@ -6,10 +6,6 @@
     private $pass = "root";
     private $database = "pigeon";
 
-    // function __construct(){
-    //   $this->Connect();
-    // }
-
     private function Connect()
     {
       $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->database);
@@ -18,44 +14,77 @@
         die("Error: $code");
       }
     }
-
-    public function Query($sql){//, $params){
-      // ToDo: Lösning med array av params
-      // if(!is_array($params))
-      // {
-      //   die();
-      // }
-      // $paramString = "";
-      // foreach($params as $value)
-      // {
-      //   $paramString += substr(gettype($value), 0, 1);
-      // }
-      // echo $paramString;
+    // Set functions
+    public function RegisterUser($user)
+    {
       $this->Connect();
+      $sql = "INSERT INTO user(email, name, password, salt, company) VALUES (?,?,?,?,?)";
+      if($stmt = $this->conn->prepare($sql))
+      {
+        $stmt->bind_param("ssssi", $user->email, $user->name, $user->password, $user->salt,$user->company);
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return true;
+      }
+      $this->conn->close();
+      return false;
+    }
+    public function UpdateImage($email, $url){
+      $this->Connect();
+      $sql = "UPDATE user
+              SET imgUrl=?
+              WHERE email='$email'";
+      if($stmt = $this->conn->prepare($sql))
+      {
+        $stmt->bind_param("s", $url);
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return true;
+      }
+      $this->conn->close();
+      return false;
+    }
+    // Tar in email och returnerar en User
+    public function GetUser($email){
+      $this->connect();
+      $sql = "SELECT * FROM user";
       $result = $this->conn->query($sql);
       if($this->conn->error){
         die($this->conn->error);
       }
-      return $result;
-    }
-
-    public function RegisterUser($email, $username, $password, $salt)
-    {
-      $this->Connect();
-      // Säkert SQL-query
-      $sql = "INSERT INTO table2(email, username, password, salt) VALUES (?,?,?,?)";
-      if($stmt = $this->conn->prepare($sql))
+      if($row = $result->fetch_assoc())
       {
-        $stmt->bind_param("ssss", $email, $username, $password, $salt);
-        $stmt->execute();
-        if($stmt->error)
-        {
-          die($stmt->error);
-        }
-        $stmt->close();
+        $user = new User($row['email'], $row['name'], $row['password'], $row['salt'], $row['company']);
+        return $user;
       }
-
-      $this->conn->close();
+      return false;
     }
+    // public function GetComments()
+    // {
+    //   $this->connect();
+    //   $sql = "SELECT email, comment FROM comment_table";
+    //   $result = $this->conn->query($sql);
+    //   if($this->conn->error){
+    //     die($this->conn->error);
+    //   }
+    //   $arr = array();
+    //   while($row = $result->fetch_assoc())
+    //   {
+    //     array_push($arr, $comment = new Comment($this->GetUser($row['email'])->name, $row['email'] , $row['comment']));
+    //   }
+    //   return $arr;
+    // }
   }
  ?>

@@ -31,4 +31,9 @@
 
     <input class='btn' type='submit' name='submit' value='Sök'>
   </form>
+
+  <form name='fileForm' action='uploadFile.php' method="POST" enctype='multipart/form-data'>
+    <input type="file" name="image">
+    <input type="submit" name="submit" value="Ladda upp bild">
+  </form>
 </div>
