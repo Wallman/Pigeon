@@ -11,6 +11,7 @@
     }
     else{ // Företag
       include ('include/views/tracking.php');
+      include ('include/views/searchTransport.php');
     }
   }
   else{ // Utloggad

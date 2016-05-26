@@ -16,8 +16,32 @@ $('#logoutBtn').click(function(){
     location.reload();
   });
 });
-
+// Göm dialog
 $('.hideBtn').click(function(e){
   var btn = e.target;
   btn.parentElement.parentElement.close();
+});
+
+// Funktion för att visa time-select
+$('input[name="now"]').click(function(){
+  if($(this).attr('value') == 0){
+    $('#timeContainer').show();
+  }
+  else{
+    $('#timeContainer').hide();
+  }
+});
+
+// Funktion för privat/företag vid registrering
+$('input[name="company"]').click(function(){
+  if($(this).attr('value') == 1){
+    $('#companyName').show();
+    $('#firstName').hide();
+    $('#lastName').hide();
+  }
+  else{
+    $('#companyName').hide();
+    $('#firstName').show();
+    $('#lastName').show();
+  }
 });

@@ -34,3 +34,10 @@ Main: #00C9D2 */
   letter-spacing: 0.04em;
   color: black;
 }
+.search .container{
+  /*background: #e9eaea;*/
+  background-image: url('../img/transparent40.png');
+  border-radius: 10px;
+  width: 50%;
+  margin: 10px auto;
+}
