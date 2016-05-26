@@ -1,18 +1,18 @@
 <dialog id='loginDialog'>
-  <form name='loginForm' method='POST' action='login.php'>
+  <form name='loginForm' method='POST' onsubmit='return validateForm(this)' action='login.php'>
     <label for='email'>Email</label>
     <input type='text' name='email' placeholder='Email'>
 
     <label for='password'>Lösenord</label>
     <input type='password' name='password' placeholder='Lösenord'>
 
-    <input type='submit' name='submitRegister' class='btn' value='Logga in'>
+    <input type='submit' name='submitLogin' class='btn' value='Logga in'>
     <button type='button' class='hideBtn'>Avbryt</button>
   </form>
 </dialog>
 
 <dialog id='registerDialog'>
-  <form name='registerPrivate' method='POST' action='register.php'>
+  <form name='registerPrivate' method='POST' onsubmit='return validateForm(this)' action='register.php'>
     <div>
       <label for='private'>Privatperson</label>
       <input type='radio' name='company' value='0' checked>
@@ -45,7 +45,7 @@
     <button type='button' class='hideBtn'>Avbryt</button>
   </form>
 
-  <form name='registerCompany' method='POST' action='register.php' hidden>
+  <form name='registerCompany' method='POST' onsubmit='return validateForm(this)' action='register.php' hidden>
     <div>
       <label for='private'>Privatperson</label>
       <input type='radio' name='company' id='private' value='0'>

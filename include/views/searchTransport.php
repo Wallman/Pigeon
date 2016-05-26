@@ -5,7 +5,7 @@
   </div>
 
   <div class='container'>
-    <form name='searchForm' method='POST' action='search_process.php'>
+    <form name='searchForm' method='POST' onsubmit='return validateForm(this)' action='search_process.php'>
       <h2>Sök transport</h2>
       <input type='text' name='from' placeholder='Från' class='text'>
       <input type='text' name='to' placeholder='Till' class='text'>

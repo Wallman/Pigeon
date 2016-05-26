@@ -14,5 +14,6 @@
     <link rel='stylesheet' type='text/css' href='assets/css/dialog.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/form.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/profile.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/table.css'>
   </head>
   <body>

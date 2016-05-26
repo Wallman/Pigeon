@@ -35,7 +35,7 @@ $('input[name="now"]').click(function(){
 // Funktion för privat/företag vid registrering
 $('input[name="company"]').click(function(){
   if($(this).attr('value') == 1){
-    $('#companyName').show();
+    $('#companyName').show().focus();
     $('#firstName').hide();
     $('#lastName').hide();
   }

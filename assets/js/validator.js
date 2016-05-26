@@ -1,22 +1,15 @@
 // Form validation
-$('form').submit(function(e){
-  $form = $(this);
-  var $inputs = $('input', this);
-
+function validateForm(form){
+  var children = form.children;
   // Iterera alla fält
-  var allValidated = false;
-  $inputs.each(function(index, value){
-    if(value.type == 'text' || value.type == 'password' ){
-      if(ValidateField(value)){
-        allValidated = true;
-      }
-      else{
+  for(var i = 0; i < children.length; i++){
+    if(children[i].type == 'text' || children[i].type == 'password'){
+      if(!ValidateField(children[i])){
         return false;
       }
     }
-  });
-  return allValidated;
-});
+  }
+}
 
 // Funktion för att kontrollera och ev. ändra ett fält
 var ValidateField = function(field)

@@ -1,6 +1,7 @@
 <?php
 include ('include/header.php');
 include ('include/views/menu.php');
+include ('include/views/dialogs.php');
 if(isset($_SESSION['email'])){
   if(isset($_POST)){
     $v = new Validator();
@@ -15,7 +16,7 @@ if(isset($_SESSION['email'])){
   }
 }
 else{
-  echo "Logga in först";
+  echo "<h1>Logga in först</h1>";
 }
 include ('include/footer.php');
 ?>
