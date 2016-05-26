@@ -18,27 +18,6 @@ $('form').submit(function(e){
     return true;
   });
 
-  // if(allValidated){
-  //   // ajax request
-  //   url = $form.attr('action');
-  //   var posting = $.post(url, $form.serialize());
-  //   posting.done(function(returnData){
-  //     console.log(returnData);
-  //     if(returnData == "false"){
-  //       $form[0].reset();
-  //       return false;
-  //     }
-  //     if($form.attr('name') == 'loginForm'){
-  //       $('#loginDialog')[0].close();
-  //     }
-  //     else{
-  //       $('#registerDialog')[0].close();
-  //     }
-  //     return true;
-  //   });
-  // }
-// });
-
 // Funktion för att kontrollera och ev. ändra ett fält
 var ValidateField = function(field)
 {
