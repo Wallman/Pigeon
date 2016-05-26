@@ -1,42 +1,24 @@
 // Form validation
-$('form').submit(function(e){
-  e.preventDefault();
-  $form = $(this);
-  var $inputs = $('input', this);
-
-  // Iterera alla fält
-  var allValidated = false;
-  $inputs.each(function(index, value){
-    if(value.type == 'text' || value.type == 'password' ){
-      if(ValidateField(value)){
-        allValidated = true;
-      }
-      else{
-        return false;
-      }
-    }
-    return true;
-  });
-
-  // if(allValidated){
-  //   // ajax request
-  //   url = $form.attr('action');
-  //   var posting = $.post(url, $form.serialize());
-  //   posting.done(function(returnData){
-  //     console.log(returnData);
-  //     if(returnData == "false"){
-  //       $form[0].reset();
-  //       return false;
-  //     }
-  //     if($form.attr('name') == 'loginForm'){
-  //       $('#loginDialog')[0].close();
-  //     }
-  //     else{
-  //       $('#registerDialog')[0].close();
-  //     }
-  //     return true;
-  //   });
-  // }
+// $('form').submit(function(e){
+//   e.preventDefault();
+//   console.log("test");
+//   $form = $(this);
+//   var $inputs = $('input', this);
+//
+//   // Iterera alla fält
+//   var allValidated = false;
+//   // $inputs.each(function(index, value){
+//   //   if(value.type == 'text' || value.type == 'password' ){
+//   //     if(ValidateField(value)){
+//   //       allValidated = true;
+//   //     }
+//   //     else{
+//   //       return false;
+//   //     }
+//   //   }
+//   // });
+//   console.log("true");
+//   return true;
 // });
 
 // Funktion för att kontrollera och ev. ändra ett fält

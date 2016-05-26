@@ -3,13 +3,17 @@
 
     public function ValidateRegistration($user)
     {
-      if( $this->ValidateEmail($user->email) &&
-          $this->ValidateString($user->name) &&
-          $this->ValidatePassword($user->password))
-        {
-          return true;
-        }
-        return false;
+      $allValidated = $this->ValidateEmail($user->email);
+      $allValidated = $this->ValidatePassword($user->password);
+
+      if(get_class($user) == 'User'){
+        $allValidated = $this->ValidateString($user->firstName);
+        $allValidated = $this->ValidateString($user->lastName);
+      }
+      else{
+        $allValidated = $this->ValidateString($user->companyName);
+      }
+      return $allValidated;
     }
 
     public function ValidateLogin($email, $password)
