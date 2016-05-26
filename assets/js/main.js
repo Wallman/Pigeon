@@ -13,7 +13,7 @@ $('#registerBtn').click(function(){
 
 $('#logoutBtn').click(function(){
   $.get('logout.php', function(){
-    location.reload();
+    window.location = 'index.php';
   });
 });
 // Göm dialog
