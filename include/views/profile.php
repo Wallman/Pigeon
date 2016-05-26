@@ -3,21 +3,13 @@
 
     <img src="http://www.netdoktorpro.se/images/img/no_avatar.gif" alt='profile'>
 
-    <?php
-    if (isset($_POST['email'])){
-      $email = $_POST['email'];
-      $
-      exit();
-    }
-     ?>
-
 <?php
   $_SESSION['company']; // Privat: 0 , Företag: 1
   if($_SESSION['company'] == 0){
     echo "
     <form>
        <label for='name'>Namn</label>
-       <input type='text' name='name' value='$email' readonly><br>
+       <input type='text' name='name' value='Sven Svensson' readonly><br>
        <label for='email'>Email</label>
        <input type='text' name='email' value='sven.son@gmail.com' readonly><br>
        <label for='adress'>Adress</label>
@@ -33,7 +25,7 @@
     echo "
     <form>
     <label for='name'>Namn</label>
-    <input type='text' name='name' value='$email' readonly><br>
+    <input type='text' name='name' value='Sven Svensson' readonly><br>
     <label for='email'>Email</label>
     <input type='text' name='email' value='sven.son@gmail.com' readonly><br>
     <label for='adress'>Adress</label>

@@ -2,7 +2,7 @@
 
 <div class='about'>
   <div class='container'>
-    <img src="http://placehold.it/150x150" alt='steg1'>
+    <img src="img src='assets/img/about1.png' alt='pencil'/>" alt='steg1'>
     <h3>Registrera dig</h3>
     <p>Registrera dig hos oss<br></br>för att komma igång direkt.</p>
   </div>
