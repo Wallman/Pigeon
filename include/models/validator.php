@@ -26,6 +26,17 @@
       return false;
     }
 
+    public function ValidateSearch($search){
+      $allValidated = $this->ValidateString($search->from);
+      $allValidated = $this->ValidateString($search->to);
+      // Om den ska validera tids-inputen.
+      if($search->now == '0'){
+        $allValidated = $this->ValidateString($search->day);
+        $allValidated = $this->ValidateString($search->hour);
+        $allValidated = $this->ValidateString($search->minute);
+      }
+      return $allValidated;
+    }
     private function ValidateEmail($email)
     {
       if(strpos($email, "@") == 0 || strpos($email, ".") <= strpos($email, "@"))
