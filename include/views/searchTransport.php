@@ -38,7 +38,7 @@
         </select>
       </div>
 
-      <input class='btn' type='submit' name='submit' value='Sök'>
+      <input class='btn' type='submit' id='submitSearch' name='submitSearch' value='Sök'>
     </form>
   </div>
 </div>

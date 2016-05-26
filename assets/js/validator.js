@@ -9,6 +9,13 @@ function validateForm(form){
       }
     }
   }
+  if(form.name == 'searchForm'){
+    var loggedIn = !!document.getElementById('logoutBtn');
+    if(!loggedIn){
+      $('#submitSearch').before('<h3>Logga in eller skapa konto först</h3>');
+      return false;
+    }
+  }
 }
 
 // Funktion för att kontrollera och ev. ändra ett fält

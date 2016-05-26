@@ -29,7 +29,6 @@
     else {
       die ("false");
     }
-
     header("Location: index.php");
   }
 
