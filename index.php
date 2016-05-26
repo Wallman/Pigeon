@@ -5,9 +5,14 @@
   if(isset($_SESSION['email'])){
     // Privat
     if($_SESSION['company'] == 0){
-      include ('include/views/tracking.php');
-      include ('include/views/searchTransport.php');
-      include ('include/views/profile.php');
+      if(isset($_SESSION['category'])){
+        include ('admin.php');
+      }
+      else{
+        include ('include/views/tracking.php');
+        include ('include/views/searchTransport.php');
+        include ('include/views/profile.php');
+      }
     }
     else{ // Företag
       include ('include/views/tracking.php');

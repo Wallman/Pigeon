@@ -97,7 +97,10 @@
           else{
             $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt'], $row['company']);
           }
-
+          if($row['category'] == 1){
+            echo "admin";
+            $_SESSION['category'] = 1;
+          }
           $stmt->close();
           $this->conn->close();
           return $user;

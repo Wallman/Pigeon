@@ -24,7 +24,6 @@
       $_SESSION['email'] = $user->email;
       $_SESSION['name'] = $user->firstName . $user->lastName;
       $_SESSION['company'] = 0;
-}
     }
 
     if(get_class($user) == 'Company'){
