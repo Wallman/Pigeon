@@ -17,15 +17,20 @@
     {
       session_start();
       $_SESSION['email'] = $user->email;
-      $_SESSION['name'] = $user->name;
-      $_SESSION['company'] = $user->company;
+      if(get_class($user) == 'User'){
+        $_SESSION['name'] = $user->firstName . $user->lastName;
+        $_SESSION['company'] = 0;
+      }
+      else{
+        $_SESSION['name'] = $user->companyName;
+        $_SESSION['company'] = 1;
+      }
     }
     else {
       die ("false");
     }
 
     header("Location: index.php");
-    // AJAX header("Location: include/views/add_comment.php");
   }
 
  ?>

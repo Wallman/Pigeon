@@ -1,19 +1,19 @@
 <?php
   class User{
 
-    function __construct($email, $name, $password, $salt, $company){
+    function __construct($email, $firstName, $lastName, $password, $salt){
       $this->email = $email;
-      $this->name = $name;
+      $this->firstName = $firstName;
+      $this->lastName = $lastName;
       $this->password = $password;
       $this->salt = $salt;
-      $this->company = $company;
     }
 
     public $id;
     public $email;
-    public $name;
+    public $firstName;
+    public $lastName;
     public $password;
     public $salt;
-    public $company;
   }
  ?>

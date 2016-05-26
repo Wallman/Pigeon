@@ -18,10 +18,29 @@
     public function RegisterUser($user)
     {
       $this->Connect();
-      $sql = "INSERT INTO user(email, name, password, salt, company) VALUES (?,?,?,?,?)";
+      $sql = "INSERT INTO user(email, firstName, lastName, password, salt, company) VALUES (?,?,?,?,?,0)";
       if($stmt = $this->conn->prepare($sql))
       {
-        $stmt->bind_param("ssssi", $user->email, $user->name, $user->password, $user->salt,$user->company);
+        $stmt->bind_param("sssss", $user->email, $user->firstName, $user->lastName, $user->password, $user->salt);
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return true;
+      }
+      $this->conn->close();
+      return false;
+    }
+    public function RegisterCompany($company){
+      $this->Connect();
+      $sql = "INSERT INTO user(email, companyName, password, salt, company) VALUES (?,?,?,?,1)";
+      if($stmt = $this->conn->prepare($sql))
+      {
+        $stmt->bind_param("ssss", $company->email, $company->companyName, $company->password, $company->salt);
         $stmt->execute();
         if($stmt->error)
         {
@@ -72,7 +91,13 @@
         }
         if($row = $stmt->get_result()->fetch_assoc())
         {
-          $user = new User($row['email'], $row['name'], $row['password'], $row['salt'], $row['company']);
+          if($row['company'] == 0){
+            $user = new User($row['email'], $row['firstName'], $row['lastName'], $row['password'], $row['salt'], $row['company']);
+          }
+          else{
+            $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt'], $row['company']);
+          }
+
           $stmt->close();
           $this->conn->close();
           return $user;
@@ -98,20 +123,5 @@
       }
       return false;
     }
-    // public function GetComments()
-    // {
-    //   $this->connect();
-    //   $sql = "SELECT email, comment FROM comment_table";
-    //   $result = $this->conn->query($sql);
-    //   if($this->conn->error){
-    //     die($this->conn->error);
-    //   }
-    //   $arr = array();
-    //   while($row = $result->fetch_assoc())
-    //   {
-    //     array_push($arr, $comment = new Comment($this->GetUser($row['email'])->name, $row['email'] , $row['comment']));
-    //   }
-    //   return $arr;
-    // }
   }
  ?>

@@ -1,22 +1,25 @@
 // Form validation
-$('form').submit(function(e){
-  e.preventDefault();
-  $form = $(this);
-  var $inputs = $('input', this);
-
-  // Iterera alla fält
-  var allValidated = false;
-  $inputs.each(function(index, value){
-    if(value.type == 'text' || value.type == 'password' ){
-      if(ValidateField(value)){
-        allValidated = true;
-      }
-      else{
-        return false;
-      }
-    }
-    return true;
-  });
+// $('form').submit(function(e){
+//   e.preventDefault();
+//   console.log("test");
+//   $form = $(this);
+//   var $inputs = $('input', this);
+//
+//   // Iterera alla fält
+//   var allValidated = false;
+//   // $inputs.each(function(index, value){
+//   //   if(value.type == 'text' || value.type == 'password' ){
+//   //     if(ValidateField(value)){
+//   //       allValidated = true;
+//   //     }
+//   //     else{
+//   //       return false;
+//   //     }
+//   //   }
+//   // });
+//   console.log("true");
+//   return true;
+// });
 
 // Funktion för att kontrollera och ev. ändra ett fält
 var ValidateField = function(field)
