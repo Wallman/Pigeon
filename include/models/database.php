@@ -13,6 +13,7 @@
         $code = $conn->connect_errno;
         die("Error: $code");
       }
+      $this->conn->set_charset('utf8');
     }
     // Set functions
     public function RegisterUser($user)

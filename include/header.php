@@ -16,5 +16,6 @@
     <link rel='stylesheet' type='text/css' href='assets/css/profile.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/table.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/admin.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/news.css'>
   </head>
   <body>
