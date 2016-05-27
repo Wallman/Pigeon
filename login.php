@@ -18,9 +18,10 @@
       session_start();
       $_SESSION['email'] = $user->email;
       if(get_class($user) == 'User'){
-        $_SESSION['name'] = $user->firstName . $user->lastName;
+        $_SESSION['name'] = $user->firstName . ' ' . $user->lastName;
         $_SESSION['company'] = 0;
         $_SESSION['category'] = $user->category;
+        $_SESSION['id'] = $user->id;
       }
       else{
         $_SESSION['name'] = $user->companyName;

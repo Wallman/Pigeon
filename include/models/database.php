@@ -93,9 +93,11 @@
         {
           if($row['company'] == 0){
             $user = new User($row['email'], $row['firstName'], $row['lastName'], $row['password'], $row['salt'], $row['category']);
+            $user->id = $row['id'];
           }
           else{
             $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt']);
+            $user->id = $row['id'];
           }
           $stmt->close();
           $this->conn->close();
@@ -121,6 +123,42 @@
         return $row['imgUrl'];
       }
       return false;
+    }
+
+    public function AddNews($authorId, $title, $message){
+      $this->Connect();
+      $sql = "INSERT INTO news(authorId, title, message) VALUES (?,?,?)";
+      if($stmt = $this->conn->prepare($sql))
+      {
+        $stmt->bind_param("iss", $authorId, $title, $message);
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return true;
+      }
+      $this->conn->close();
+      return false;
+    }
+
+    public function GetNews(){
+      $this->connect();
+      $sql = "SELECT title, message FROM news";
+      $result = $this->conn->query($sql);
+      if($this->conn->error){
+        die($this->conn->error);
+      }
+      $arr = array();
+      while($row = $result->fetch_assoc())
+      {
+        $obj = array('title' => $row['title'], 'message' => $row['message']);
+        array_push($arr, $obj);
+      }
+      return $arr;
     }
   }
  ?>

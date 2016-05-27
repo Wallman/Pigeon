@@ -1,4 +1,5 @@
 <?php
+// Egentligen är det en del views i denna, refaktorisera?
 include ('include/header.php');
 include ('include/views/menu.php');
 include ('include/views/dialogs.php');

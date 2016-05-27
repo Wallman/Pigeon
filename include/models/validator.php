@@ -37,6 +37,14 @@
       }
       return $allValidated;
     }
+
+    public function ValidateNews($title, $message){
+      if($this->ValidateString($title) && $this->ValidateString($message)){
+        return true;
+      }
+      return false;
+    }
+
     private function ValidateEmail($email)
     {
       if(strpos($email, "@") == 0 || strpos($email, ".") <= strpos($email, "@"))

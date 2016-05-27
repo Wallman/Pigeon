@@ -9,12 +9,16 @@ function validateForm(form){
       }
     }
   }
+  // Lägg till varning om användaren försöker söka utan att vara inloggad.
   if(form.name == 'searchForm'){
     var loggedIn = !!document.getElementById('logoutBtn');
     if(!loggedIn){
       $('#submitSearch').before('<h3>Logga in eller skapa konto först</h3>');
       return false;
     }
+  }
+  if(form.name == 'newsForm'){
+    alert("Nyhet publicerad!");
   }
 }
 

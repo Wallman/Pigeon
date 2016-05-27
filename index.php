@@ -7,17 +7,19 @@
     if($_SESSION['company'] == 0){
       // echo $_SESSION['category'];
       if($_SESSION['category'] == 1){
-        include ('include/views/admin.php');
+        include ('include/views/addNews.php');
       }
       else{
         include ('include/views/tracking.php');
         include ('include/views/searchTransport.php');
         include ('include/views/profile.php');
+        include ('include/views/news.php');
       }
     }
     else{ // Företag
       include ('include/views/tracking.php');
       include ('include/views/searchTransport.php');
+      include ('include/views/news.php');
     }
   }
   else{ // Utloggad
