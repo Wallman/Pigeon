@@ -61,7 +61,7 @@
               WHERE email='$email'";
       if($stmt = $this->conn->prepare($sql))
       {
-        $stmt->bind_param("s", $url);
+        $stmt->bind_param('s', $url);
         $stmt->execute();
         if($stmt->error)
         {
@@ -92,14 +92,10 @@
         if($row = $stmt->get_result()->fetch_assoc())
         {
           if($row['company'] == 0){
-            $user = new User($row['email'], $row['firstName'], $row['lastName'], $row['password'], $row['salt'], $row['company']);
+            $user = new User($row['email'], $row['firstName'], $row['lastName'], $row['password'], $row['salt'], $row['category']);
           }
           else{
-            $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt'], $row['company']);
-          }
-          if($row['category'] == 1){
-            echo "admin";
-            $_SESSION['category'] = 1;
+            $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt']);
           }
           $stmt->close();
           $this->conn->close();

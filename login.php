@@ -20,10 +20,12 @@
       if(get_class($user) == 'User'){
         $_SESSION['name'] = $user->firstName . $user->lastName;
         $_SESSION['company'] = 0;
+        $_SESSION['category'] = $user->category;
       }
       else{
         $_SESSION['name'] = $user->companyName;
         $_SESSION['company'] = 1;
+        $_SESSION['category'] = $user->category;
       }
     }
     else {

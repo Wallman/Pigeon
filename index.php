@@ -5,8 +5,9 @@
   if(isset($_SESSION['email'])){
     // Privat
     if($_SESSION['company'] == 0){
-      if(isset($_SESSION['category'])){
-        include ('admin.php');
+      // echo $_SESSION['category'];
+      if($_SESSION['category'] == 1){
+        include ('include/views/admin.php');
       }
       else{
         include ('include/views/tracking.php');

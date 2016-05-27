@@ -1,12 +1,13 @@
 <?php
   class User{
 
-    function __construct($email, $firstName, $lastName, $password, $salt){
+    function __construct($email, $firstName, $lastName, $password, $salt, $category){
       $this->email = $email;
       $this->firstName = $firstName;
       $this->lastName = $lastName;
       $this->password = $password;
       $this->salt = $salt;
+      $this->category = $category;
     }
 
     public $id;
@@ -15,5 +16,6 @@
     public $lastName;
     public $password;
     public $salt;
+    public $category;
   }
  ?>
