@@ -1,6 +1,5 @@
 .addNews{
   padding: 50px 50px;
-  background: #e9eaea;
 }
 .news-row{
   margin-left: 20px;
@@ -11,7 +10,7 @@
   border-radius: 5px;
 }
 .addNews a{
-  color: blue;
+  color: #00C9D2;
   font-size: 20pt;
 }
 .addNews p{

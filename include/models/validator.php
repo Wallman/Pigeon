@@ -47,7 +47,7 @@
 
     private function ValidateEmail($email)
     {
-      if(strpos($email, "@") == 0 || strpos($email, ".") <= strpos($email, "@"))
+      if(strpos($email, "@") == 0 || strpos($email, ".") == 0)
       {
         die ("Ogiltig email ");
         return false;

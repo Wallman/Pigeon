@@ -8,6 +8,7 @@
       // echo $_SESSION['category'];
       if($_SESSION['category'] == 1){
         include ('include/views/addNews.php');
+        include ('include/views/news.php');
       }
       else{
         include ('include/views/tracking.php');

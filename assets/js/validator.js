@@ -1,6 +1,7 @@
 // Form validation
 function validateForm(form){
   var children = form.children;
+  console.log("test");
   // Iterera alla fält
   for(var i = 0; i < children.length; i++){
     if(children[i].type == 'text' || children[i].type == 'password'){
@@ -54,7 +55,7 @@ var ValidateString = function(string){
 };
 // Stödfunktion
 var ValidateEmail = function(email){
-  if(email.trim() == "" || email.indexOf("@") == -1 || email.indexOf(".") <= email.indexOf("@")){
+  if(email.trim() == "" || email.indexOf("@") == -1 || email.indexOf(".") == -1){
     return false;
   }
   return true;
