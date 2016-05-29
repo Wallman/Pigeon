@@ -1,5 +1,9 @@
-.tracking{
-  padding: 3%;
+.tracking .container{
+  margin: 0 auto;
+  width: 50%;
+}
+.tracking h1{
+  margin: 20px 25%;
 }
 #animation-container{
   display: inline-block;
@@ -7,10 +11,11 @@
   height: 400px;
   width: 50%;
   left: 25%;
-  background: url('img/map.png');
+  background: url('../img/map.png');
   background-size: cover;
   border-radius: 5px;
   border: 1px solid lightgrey;
+  margin-bottom: 20px;
 }
 #dot{
   position: relative;

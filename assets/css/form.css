@@ -1,25 +1,31 @@
+.search form{
+  width: 100%;
+}
 form{
-  /*background: #e9eaea;*/
-  /*border: 1px solid lightgrey;*/
-  /*border-radius: 10px;*/
   width: 50%;
   margin: 10px auto;
   padding: 10px;
 }
-input[type='text']{
+input[type='text'], input[type='password']{
   display: block;
   width: 95%;
-  font-size: 20px;
   padding: 10px 5px;
-  margin: 6px 0;
+}
+input[type='submit']{
+  display: block;
+  padding: 15px 32px;
 }
 input{
   display: block;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   padding: 0.5em;
   font-size: 14px;
-  width: 80%;
 }
 input.formInvalid::-webkit-input-placeholder {
    color: red;
+}
+label{
+  color: black;
+  font-size: 16pt;
 }

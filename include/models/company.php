@@ -1,22 +1,16 @@
 <?php
-  class User{
-
-    function __construct($email, $firstName, $lastName, $password, $salt, $category){
+  class Company{
+    function __construct($email, $companyName, $password, $salt){
       $this->email = $email;
-      $this->firstName = $firstName;
-      $this->lastName = $lastName;
+      $this->companyName = $companyName;
       $this->password = $password;
       $this->salt = $salt;
-      $this->category = $category;
     }
-
     public $id;
     public $email;
-    public $firstName;
-    public $lastName;
+    public $companyName;
     public $password;
     public $salt;
-    public $category;
     // Nedan kan vara null
     public $imgUrl;
     public $adress;

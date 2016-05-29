@@ -6,7 +6,11 @@ html, body{
   height: 100%;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+body > div{
+  padding: 3%;
+}
 .menu{
+  padding: 0;
   height: 45px;
   background-color: #00C9D2;
   display: flex;
@@ -28,20 +32,6 @@ html, body{
   background-color: white;
   color: black;
 }
-/*Ta bort nedan?? Det är för ev. privat och företagslänkar*/
-.menu a{
-  align-self: flex-end;
-  background-color: #009299;
-  margin-left: 20px;
-  padding: 8px 15px;
-  color: white;
-  font-weight: 300;
-  border-radius: 5px 5px 0 0;
-  text-decoration: none;
-}
-.menu a:hover{
-  outline: 1px solid white;
-}
 .btn{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -51,5 +41,4 @@ html, body{
     display: block;
     font-size: 16px;
     margin: 10px 0;
-    width: 20%;
 }

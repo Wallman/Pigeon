@@ -1,6 +1,5 @@
 <div class='menu'>
   <?php
-    // echo $_SERVER['PHP_SELF'];
     if(isset($_SESSION['email'])){
       echo "<div>
               <button id='logoutBtn' type='button'>Logga ut</button>

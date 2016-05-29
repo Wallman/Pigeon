@@ -1,0 +1,13 @@
+.upload_picture{
+  width: 20%;
+}
+.upload_picture .btn{
+  width: 100%;
+}
+.profile img{
+  border-radius:50%;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+}
