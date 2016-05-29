@@ -7,8 +7,8 @@
     if($_SESSION['company'] == 0){
       // Admin
       if($_SESSION['category'] == 1){
-        include ('include/views/profile.php');
         include ('include/views/addNews.php');
+        include ('include/views/profile.php');
         include ('include/views/news.php');
       }
       // Vanlig
