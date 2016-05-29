@@ -17,5 +17,10 @@
     public $password;
     public $salt;
     public $category;
+    // Nedan kan vara null
+    public $imgUrl;
+    public $adress;
+    public $city;
+    public $zipCode;
   }
  ?>

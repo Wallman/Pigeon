@@ -35,11 +35,12 @@
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+            // echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
             // Lokalt och databas bör egentligen båda fungera för att vi ska vara klara.
             $db = new Database();
             // $db->UpdateImage($_SESSION['email'], $target_file);
-            $db->UpdateImage('daniel@me.se', $target_file);
+            session_start();
+            $db->UpdateImage($_SESSION['email'], $target_file);
         } else {
             echo "Sorry, there was an error uploading your file.";
         }

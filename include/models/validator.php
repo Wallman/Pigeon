@@ -1,7 +1,7 @@
 <?php
   class Validator{
 
-    public function ValidateRegistration($user)
+    public function ValidateUser($user)
     {
       $allValidated = $this->ValidateEmail($user->email);
       $allValidated = $this->ValidatePassword($user->password);
@@ -16,6 +16,17 @@
       return $allValidated;
     }
 
+    public function ValidateEdit($user){
+      $allValidated = $this->ValidateEmail($user->email);
+      if(get_class($user) == 'User'){
+        $allValidated = $this->ValidateString($user->firstName);
+        $allValidated = $this->ValidateString($user->lastName);
+      }
+      else{
+        $allValidated = $this->ValidateString($user->companyName);
+      }
+      return $allValidated;
+    }
     public function ValidateLogin($email, $password)
     {
       if( $this->ValidateEmail($email) &&

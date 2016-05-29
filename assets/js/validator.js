@@ -5,8 +5,11 @@ function validateForm(form){
   // Iterera alla fält
   for(var i = 0; i < children.length; i++){
     if(children[i].type == 'text' || children[i].type == 'password'){
-      if(!ValidateField(children[i])){
-        return false;
+      // Validera inte adress, city, zipcode
+      if(children[i].name != 'adress' && children[i].name != 'city' && children[i].name != 'zipCode'){
+        if(!ValidateField(children[i])){
+          return false;
+        }
       }
     }
   }

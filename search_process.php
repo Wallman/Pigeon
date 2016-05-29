@@ -1,5 +1,5 @@
 <?php
-// Egentligen är det en del views i denna, refaktorisera?
+// Detta är en tidig protyp, rapporten beskriver hur detta egentligen ska fungera.
 include ('include/header.php');
 include ('include/views/menu.php');
 include ('include/views/dialogs.php');

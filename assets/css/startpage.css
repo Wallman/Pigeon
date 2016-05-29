@@ -25,6 +25,12 @@ Main: #00C9D2 */
   color: #00C9D2;
   color: white;
 }
+.search .container{
+  background-image: url('../img/transparent40.png');
+  border-radius: 10px;
+  width: 50%;
+  margin: 10px auto;
+}
 .about .container{
   margin: 50px 0;
   text-align: center;
@@ -34,10 +40,11 @@ Main: #00C9D2 */
   letter-spacing: 0.04em;
   color: black;
 }
-.search .container{
-  /*background: #e9eaea;*/
-  background-image: url('../img/transparent40.png');
-  border-radius: 10px;
-  width: 50%;
-  margin: 10px auto;
+.about > div:first-child{
+  margin-bottom: 150px;
+}
+.icon{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }

@@ -5,11 +5,13 @@
   if(isset($_SESSION['email'])){
     // Privat
     if($_SESSION['company'] == 0){
-      // echo $_SESSION['category'];
+      // Admin
       if($_SESSION['category'] == 1){
+        include ('include/views/profile.php');
         include ('include/views/addNews.php');
         include ('include/views/news.php');
       }
+      // Vanlig
       else{
         include ('include/views/tracking.php');
         include ('include/views/searchTransport.php');
@@ -20,6 +22,7 @@
     else{ // Företag
       include ('include/views/tracking.php');
       include ('include/views/searchTransport.php');
+      include ('include/views/profile.php');
       include ('include/views/news.php');
     }
   }

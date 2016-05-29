@@ -19,10 +19,21 @@
     public function RegisterUser($user)
     {
       $this->Connect();
-      $sql = "INSERT INTO user(email, firstName, lastName, password, salt, company) VALUES (?,?,?,?,?,0)";
+      if(get_class($user) == 'User'){
+        $sql = "INSERT INTO user(email, firstName, lastName, password, salt, company) VALUES (?,?,?,?,?,0)";
+      }
+      else{
+        $sql = "INSERT INTO user(email, companyName, password, salt, company) VALUES (?,?,?,?,1)";
+      }
+
       if($stmt = $this->conn->prepare($sql))
       {
-        $stmt->bind_param("sssss", $user->email, $user->firstName, $user->lastName, $user->password, $user->salt);
+        if(get_class($user) == 'User'){
+          $stmt->bind_param("sssss", $user->email, $user->firstName, $user->lastName, $user->password, $user->salt);
+        }
+        else{
+          $stmt->bind_param("ssss", $user->email, $user->companyName, $user->password, $user->salt);
+        }
         $stmt->execute();
         if($stmt->error)
         {
@@ -36,25 +47,7 @@
       $this->conn->close();
       return false;
     }
-    public function RegisterCompany($company){
-      $this->Connect();
-      $sql = "INSERT INTO user(email, companyName, password, salt, company) VALUES (?,?,?,?,1)";
-      if($stmt = $this->conn->prepare($sql))
-      {
-        $stmt->bind_param("ssss", $company->email, $company->companyName, $company->password, $company->salt);
-        $stmt->execute();
-        if($stmt->error)
-        {
-          echo $stmt->error;
-          return false;
-        }
-        $stmt->close();
-        $this->conn->close();
-        return true;
-      }
-      $this->conn->close();
-      return false;
-    }
+
     public function UpdateImage($email, $url){
       $this->Connect();
       $sql = "UPDATE user
@@ -94,12 +87,16 @@
         {
           if($row['company'] == 0){
             $user = new User($row['email'], $row['firstName'], $row['lastName'], $row['password'], $row['salt'], $row['category']);
-            $user->id = $row['id'];
           }
           else{
             $user = new Company($row['email'], $row['companyName'], $row['password'], $row['salt']);
-            $user->id = $row['id'];
           }
+          $user->id = $row['id'];
+          $user->imgUrl = $row['imgUrl'];
+          $user->adress = $row['adress'];
+          $user->city = $row['city'];
+          $user->zipCode = $row['zipCode'];
+
           $stmt->close();
           $this->conn->close();
           return $user;
@@ -112,17 +109,39 @@
       return false;
     }
 
-    public function GetImg($email){
-      $this->connect();
-      $sql = "SELECT imgUrl FROM user";
-      $result = $this->conn->query($sql);
-      if($this->conn->error){
-        die($this->conn->error);
+    public function EditUser($user){
+      $this->Connect();
+      if(get_class($user) == 'User'){
+        $sql = "UPDATE user
+                SET email=?, firstName=?, lastName=?, adress=?, city=?, zipCode=?
+                WHERE email=?";
       }
-      if($row = $result->fetch_assoc())
+      else{
+        $sql = "UPDATE user
+                SET email=?, companyName=?, adress=?, city=?, zipCode=?
+                WHERE email=?";
+      }
+
+      if($stmt = $this->conn->prepare($sql))
       {
-        return $row['imgUrl'];
+        if(get_class($user) == 'User'){
+          $stmt->bind_param("sssssss", $user->email, $user->firstName, $user->lastName, $user->adress, $user->city, $user->zipCode, $_SESSION['email']);
+        }
+        else{
+          $stmt->bind_param("ssssss", $user->email, $user->companyName, $user->adress, $user->city, $user->zipCode, $_SESSION['email']);
+        }
+
+        $stmt->execute();
+        if($stmt->error)
+        {
+          echo $stmt->error;
+          return false;
+        }
+        $stmt->close();
+        $this->conn->close();
+        return true;
       }
+      $this->conn->close();
       return false;
     }
 

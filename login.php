@@ -26,7 +26,7 @@
       else{
         $_SESSION['name'] = $user->companyName;
         $_SESSION['company'] = 1;
-        $_SESSION['category'] = $user->category;
+        $_SESSION['category'] = 0;
       }
     }
     else {

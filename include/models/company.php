@@ -11,5 +11,10 @@
     public $companyName;
     public $password;
     public $salt;
+    // Nedan kan vara null
+    public $imgUrl;
+    public $adress;
+    public $city;
+    public $zipCode;
   }
  ?>
