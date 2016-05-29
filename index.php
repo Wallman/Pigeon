@@ -1,6 +1,7 @@
 <?php
   include ('include/header.php');
   include ('include/views/menu.php');
+  // session_destroy();
   // Inloggad
   if(isset($_SESSION['email'])){
     // Privat
@@ -11,7 +12,7 @@
     }
     else{ // Företag
       include ('include/views/tracking.php');
-      include ('include/views/searchTransport.php');
+      include ('include/views/profile.php');
     }
   }
   else{ // Utloggad

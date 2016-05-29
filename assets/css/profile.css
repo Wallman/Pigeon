@@ -1,4 +1,46 @@
-.profile body {
-    background-image: url("http://static.tumblr.com/e86175016ca7e3afab25bd7a7b321da9/avakhy0/tTzn7kqhw/tumblr_static_aritsffbq1skocoswowk0gkg8.png");
-    /*border-radius: 50%;*/
+.profile{
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.profile input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0;
+  width: 20%;
+  margin: 0 auto;
+
+}
+
+.profile form{
+    width: 60%;
+    margin: 0 auto;
+}
+.profile img{
+    border-radius:50%;
+    border: 4px solid #4CAF50;
+    width: 160px;
+    height: 145px;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile label{
+  border-bottom:1pt solid lightgrey;
+}
+
+.profile .container{
+  margin: 0 auto;
+  width: 45%;
+  background: #e9eaea;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: left;
+  border-bottom:1pt solid lightgrey;
 }
