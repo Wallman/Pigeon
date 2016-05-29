@@ -1,18 +1,26 @@
 <?php
   include ('include/header.php');
   include ('include/views/menu.php');
-  // session_destroy();
   // Inloggad
   if(isset($_SESSION['email'])){
     // Privat
     if($_SESSION['company'] == 0){
-      include ('include/views/tracking.php');
-      include ('include/views/searchTransport.php');
-      include ('include/views/profile.php');
+      // echo $_SESSION['category'];
+      if($_SESSION['category'] == 1){
+        include ('include/views/addNews.php');
+        include ('include/views/news.php');
+      }
+      else{
+        include ('include/views/tracking.php');
+        include ('include/views/searchTransport.php');
+        include ('include/views/profile.php');
+        include ('include/views/news.php');
+      }
     }
     else{ // Företag
       include ('include/views/tracking.php');
-      include ('include/views/profile.php');
+      include ('include/views/searchTransport.php');
+      include ('include/views/news.php');
     }
   }
   else{ // Utloggad
