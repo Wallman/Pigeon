@@ -1,13 +1,13 @@
 <?php
   class Database{
     private $conn;
-    // private $host = "localhost:8889";
-    // private $user = "root";
-    // private $pass = "root";
-    private $host = "danielwallman.se.mysql";
-    private $user = "danielwallman_s";
-    private $pass = "4q7B7hdE";
-    private $database = "danielwallman_s";
+    private $host = "localhost:8889";
+    private $user = "root";
+    private $pass = "root";
+    // private $host = "danielwallman.se.mysql";
+    // private $user = "danielwallman_s";
+    // private $pass = "4q7B7hdE";
+    // private $database = "danielwallman_s";
 
     private function Connect()
     {
