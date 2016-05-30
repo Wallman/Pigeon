@@ -1,6 +1,10 @@
 .addNews{
   padding: 50px 50px;
 }
+iframe{
+  width: 100%;
+  height: 500px;
+}
 .news-row{
   margin-left: 20px;
   margin-bottom: 15px;

@@ -1,5 +1,7 @@
+<div class='database'>
+  <iframe src='/phpMyAdmin/'>Databas</iframe>
+</div>
 <div class='addNews'>
-  <p>Tryck <a href='/phpMyAdmin/'>här</a> för att redigera databasen</p>
   <form name='newsForm' method='POST' onsubmit='return validateForm(this)' action='addNews_process.php'>
     <h2>Lägg till nyhet</h2>
 
