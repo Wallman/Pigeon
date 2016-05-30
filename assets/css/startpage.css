@@ -41,7 +41,13 @@ Main: #00C9D2 */
   color: black;
 }
 .about > div:first-child{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+.about p{
+  font-size: 14pt;
+}
+.about > div:first-child p{
+  margin-left: 10%;
 }
 .icon{
   width: 200px;
