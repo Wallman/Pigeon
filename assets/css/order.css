@@ -2,6 +2,9 @@
   text-align: center;
 }
 .orderPlaced table{
-  width: 50%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 20px auto;
+}
+.orderPlaced .logo-container h1{
+  color: black;
 }

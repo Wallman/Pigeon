@@ -17,5 +17,6 @@
     <link rel='stylesheet' type='text/css' href='assets/css/table.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/admin.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/news.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/order.css'>
   </head>
   <body>

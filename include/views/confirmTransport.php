@@ -43,7 +43,7 @@
     </div>
 
     <input type='submit' name='submitConfirmation' class='btn' value='Skapa beställning'>
-    <button type='button' class='hideBtn'>Avbryt</button>
+    <a href='index.php' class='hideBtn'>Avbryt</a>
   </form>
 
 </div>

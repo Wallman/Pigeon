@@ -1,6 +1,11 @@
 <div class='orderPlaced'>
-  <h3>Din beställning är lagd och väntar på godkännande. <br/>
-    Innan drönaren kan starta måste sändare och mottagare bekräfta transporten.</h3>
+  <div class='logo-container'>
+    <img src='assets/img/logo.png' alt='logo'></img>
+    <h1 class='logo-text'>Pigeon</h1>
+  </div>
+
+  <h3>Din beställning är lagd och väntar på godkännande. Innan drönaren<br/>
+     kan starta måste sändare och mottagare bekräfta transporten.</h3>
 
   <table>
     <thead>
@@ -25,4 +30,5 @@
       </tr>
     </tbody>
   </table>
+  <a href='index.php' class='hideBtn'>Tillbaka</a>
 </div>
