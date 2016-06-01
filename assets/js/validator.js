@@ -1,7 +1,6 @@
 // Form validation
-function validateForm(form){
+function ValidateForm(form){
   var children = form.children;
-  console.log("test");
   // Iterera alla fält
   for(var i = 0; i < children.length; i++){
     if(children[i].type == 'text' || children[i].type == 'password'){

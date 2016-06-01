@@ -16,5 +16,7 @@
     public $day;
     public $hour;
     public $minute;
+    public $sender;
+    public $receiver;
   }
  ?>

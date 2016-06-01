@@ -1,23 +1,49 @@
 <div class='confirmTransport'>
-  <div class='logo-container'>
-    <img src='assets/img/logo.png' alt='logo'></img>
-    <h1 class='logo-text'>Pigeon</h1>
-  </div>
-  <h1>Din drönare är på väg!</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Från</th>
-        <th>Till</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><?php echo $search->from; ?></td>
-        <td><?php echo $search->to; ?></td>
-        <td><button><img src='assets/img/pencil.png' alt='pencil'/></button></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <form name='searchForm' method='POST' onsubmit='return ValidateForm(this)' action='search_process.php'>
+    <label for='from'>Från</label>
+    <input type='text' name='from' placeholder='Från' value='<?php echo $search->from; ?>'>
+
+    <label for='to'>Till</label>
+    <input type='text' name='to' placeholder='Till' value='<?php echo $search->to; ?>'>
+
+    <label for='sender'>Sändare</label>
+    <input type='text' name='sender' placeholder='Sändare'>
+
+    <label for='receiver'>Mottagare</label>
+    <input type='text' name='receiver' placeholder='Mottagare'>
+
+    <!-- Nu eller senare -->
+    <label for='radio-now'>Nu</label>
+    <input type='radio' name='now' value='1' checked>
+    <label for='radio-later'>Senare</label>
+    <input type='radio' name='now' value='0'>
+
+    <div id='timeContainer' hidden>
+      <select name='day'>
+        <option value=''>Välj dag</option>
+        <option value='today'>Idag</option>
+        <option value='tomorrow'>Imorgon</option>
+        <option value='tomorrow'>Annan dag</option>
+      </select>
+      <select name='hour'>
+        <option value=''>Välj tid</option>
+        <option value='12'>10</option>
+        <option value='12'>11</option>
+        <option value='12'>12</option>
+        <option value='13'>13</option>
+        <option value='12'>14</option>
+        <option value='12'>15</option>
+      </select>
+      <select name='minute'>
+        <option value=''>Välj tid</option>
+        <option value='00'>00</option>
+        <option value='30'>30</option>
+      </select>
+    </div>
+
+    <input type='submit' name='submitConfirmation' class='btn' value='Skapa beställning'>
+    <button type='button' class='hideBtn'>Avbryt</button>
+  </form>
+
 </div>

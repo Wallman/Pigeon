@@ -44,7 +44,7 @@ Main: #00C9D2 */
   font-size: 14pt;
 }
 .about > div:first-child p{
-  margin: 60px 10%;
+  margin: 60px 80px;
 }
 .icon{
   width: 200px;

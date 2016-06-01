@@ -46,6 +46,11 @@
         $allValidated = $this->ValidateString($search->hour);
         $allValidated = $this->ValidateString($search->minute);
       }
+      // Om sökningen är i andra steget
+      if($search->sender != NULL){
+        $allValidated = $this->ValidateString($search->sender);
+        $allValidated = $this->ValidateString($search->receiver);
+      }
       return $allValidated;
     }
 
