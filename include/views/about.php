@@ -1,8 +1,9 @@
 <div class='about'>
   <div>
     <h1>Vad är Pigeon?</h1>
-
-    <p>Pigeon är en e-tjänst som kopplar ihop kunder med transportörer och <br/> därmed möjliggör enkel beställning av varutransport med drönare.</p>
+    <blockquote>
+      <p>Pigeon är en e-tjänst som kopplar ihop kunder med transportörer och <br/> därmed möjliggör enkel beställning av varutransport med drönare.</p>
+    </blockquote>
   </div>
   <div>
     <h1>Hur fungerar det?</h1>
